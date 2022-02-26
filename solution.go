@@ -1,6 +1,7 @@
-package square
+package main
 
 import (
+	"fmt"
 	"math"
 )
 
@@ -32,4 +33,11 @@ func CalcSquare(sideLen float64, sidesNum SideInit) (area float64) {
 		area = 0
 	}
 	return area
+}
+
+func main() {
+	fmt.Println(CalcSquare(1, SidesSquare))
+	fmt.Println(CalcSquare(1, SidesTriangle))
+	fmt.Println(CalcSquare(1, SidesCircle))
+
 }
