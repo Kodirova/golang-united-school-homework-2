@@ -20,16 +20,15 @@ const (
 	SidesCircle   SideInit = 0
 )
 
-func CalcSquare(sideLen float64, sidesNum SideInit) float64 {
-	var Area float64
+func CalcSquare(sideLen float64, sidesNum SideInit) (area float64) {
 
 	switch sidesNum {
 	case SidesTriangle:
-		Area = (math.Pow(sideLen, 2.0) * math.Sqrt(3.0)) / 4.0
+		area = (math.Pow(sideLen, 2.0) * math.Sqrt(3.0)) / 4.0
 	case SidesSquare:
-		Area = math.Pow(sideLen, 2.0)
+		area = math.Pow(sideLen, 2.0)
 	case SidesCircle:
-		Area = math.Pi * math.Pow(sideLen, 2.0)
+		area = math.Pi * math.Pow(sideLen, 2.0)
 	}
-	return Area
+	return area
 }
